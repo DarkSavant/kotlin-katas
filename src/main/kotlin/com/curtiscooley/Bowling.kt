@@ -44,7 +44,6 @@ data class TenthFrame(val rolls: IntArray, val rollIndex: Int) : Frame {
     override fun score(): Int {
         return sum(rolls, rollIndex, rollIndex + 2)
     }
-
 }
 
 data class RegularFrame(val rolls: IntArray, val index: Int) : Frame {

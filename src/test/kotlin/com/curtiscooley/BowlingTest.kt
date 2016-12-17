@@ -1,6 +1,5 @@
 package com.curtiscooley
 
-import io.kotlintest.matchers.be
 import io.kotlintest.specs.FlatSpec
 import kt.times.times
 import org.hamcrest.MatcherAssert.assertThat
@@ -18,7 +17,7 @@ class BowlingTest : FlatSpec() {
 
         "One pin each roll" should "score 2" {
             val game = Bowling()
-            game.roll(1,1)
+            game.roll(1, 1)
             game.score() shouldBe 2
         }
 
@@ -29,48 +28,43 @@ class BowlingTest : FlatSpec() {
             game.score() shouldBe 15
             game.frames.size shouldBe 2
         }
-    }
 
-    @Test
-    fun spare() {
-        val game = Bowling()
-        game.spare(5)
-        game.roll(5,4)
-        assertThat(game.score(), `is`(24))
-    }
+        "spare" should "score one extra ball" {
+            val game = Bowling()
+            game.spare(5)
+            game.roll(5, 4)
+            game.score() shouldBe 24
+        }
 
-    @Test
-    fun strike() {
-        val game = Bowling()
-        game.strike()
-        game.roll(4,5)
-        assertThat(game.score(), `is`(28))
-    }
+        "strike" should "score two extra balls" {
+            val game = Bowling()
+            game.strike()
+            game.roll(4, 5)
+            game.score() shouldBe 28
+        }
 
-    @Test
-    fun perfect() {
-        val game = Bowling()
-        9 times  { game.strike() }
-        game.tenth(10, 10, 10)
-        assertThat(game.score(), `is`(300))
-    }
+        "perfect game" should "score 300" {
+            val game = Bowling()
+            9 times { game.strike() }
+            game.tenth(10, 10, 10)
+            game.score() shouldBe 300
+        }
 
-    @Test
-    fun nearPerfectGame() {
-        val game = Bowling()
-        9 times  { game.strike() }
-        game.tenth(10, 10, 9)
-        assertThat(game.score(), `is`(299))
-    }
+        "heart breaker" should "score 299" {
+            val game = Bowling()
+            9 times { game.strike() }
+            game.tenth(10, 10, 9)
+            game.score() shouldBe 299
+        }
 
-    @Test
-    fun spareStrikeCombo() {
-        val game = Bowling()
-        game.roll(4,5)
-        game.spare(8)
-        game.strike()
-        game.spare(3)
-        game.roll(8,1)
-        assertThat(game.score(), `is`(76))
+        "spares and strikes" should "score correctly" {
+            val game = Bowling()
+            game.roll(4, 5)
+            game.spare(8)
+            game.strike()
+            game.spare(3)
+            game.roll(8, 1)
+            game.score() shouldBe 76
+        }
     }
 }
