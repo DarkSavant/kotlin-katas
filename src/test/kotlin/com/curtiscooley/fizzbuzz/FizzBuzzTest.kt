@@ -1,6 +1,5 @@
 package com.curtiscooley.fizzbuzz
 
-import com.curtiscooley.fizzbuzz.countTo
 import io.kotlintest.specs.FlatSpec
 
 class FizzBuzzTest : FlatSpec() {

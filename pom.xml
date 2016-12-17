@@ -12,7 +12,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <kotlin.version>1.0.5-2</kotlin.version>
+        <kotlin.version>1.0.5-3</kotlin.version>
         <junit.version>4.12</junit.version>
     </properties>
 
@@ -44,6 +44,16 @@
             <artifactId>kotlintest</artifactId>
             <version>RELEASE</version>
             <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <artifactId>hamcrest-core</artifactId>
+                    <groupId>org.hamcrest</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>kotlin-stdlib</artifactId>
+                    <groupId>org.jetbrains.kotlin</groupId>
+                </exclusion>
+            </exclusions>
         </dependency>
     </dependencies>
 
