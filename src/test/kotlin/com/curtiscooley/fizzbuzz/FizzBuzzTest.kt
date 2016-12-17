@@ -1,5 +1,6 @@
-package com.curtiscooley
+package com.curtiscooley.fizzbuzz
 
+import com.curtiscooley.fizzbuzz.countTo
 import io.kotlintest.specs.FlatSpec
 
 class FizzBuzzTest : FlatSpec() {
@@ -20,8 +21,8 @@ class FizzBuzzTest : FlatSpec() {
             countTo(5) shouldBe "1 2 Fizz 4 Buzz"
         }
 
-        "counting to 15" should "contain FizzBuzz" {
-            countTo(15) should endWith("Fizz 13 14 FizzBuzz")
+        "counting to 16" should "contain FizzBuzz" {
+            countTo(16) should endWith("Fizz 13 14 FizzBuzz 16")
         }
     }
 }

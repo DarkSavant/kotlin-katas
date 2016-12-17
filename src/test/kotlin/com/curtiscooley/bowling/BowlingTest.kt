@@ -1,5 +1,6 @@
-package com.curtiscooley
+package com.curtiscooley.bowling
 
+import com.curtiscooley.bowling.Bowling
 import io.kotlintest.specs.FlatSpec
 import kt.times.times
 import org.hamcrest.MatcherAssert.assertThat

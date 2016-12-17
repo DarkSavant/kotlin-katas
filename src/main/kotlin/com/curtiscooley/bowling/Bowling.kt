@@ -1,4 +1,4 @@
-package com.curtiscooley
+package com.curtiscooley.bowling
 
 class Bowling() {
     val rolls = IntArray(21, {0})

@@ -1,4 +1,4 @@
-package com.curtiscooley
+package com.curtiscooley.fizzbuzz
 
 fun countTo(to: Int): String {
     var answer = ""
