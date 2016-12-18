@@ -21,7 +21,7 @@ class BowlingTest : FlatSpec() {
             game.score() shouldBe 2
         }
 
-        "4,3 then 8,0" should "score 15" {
+        "7 pin frame then 8 pin frame" should "score 15" {
             val game = Bowling()
             game.roll(4, 3)
             game.roll(8, 0)
