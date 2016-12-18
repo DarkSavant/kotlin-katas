@@ -4,9 +4,14 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.curtiscooley</groupId>
-    <artifactId>bowling</artifactId>
+    <artifactId>kotlin-katas</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <packaging>jar</packaging>
+    <modules>
+        <module>bowling</module>
+        <module>fizzbuzz</module>
+        <module>gildedrose</module>
+    </modules>
+    <packaging>pom</packaging>
 
     <name>com.curtiscooley bowling</name>
 
@@ -58,8 +63,8 @@
     </dependencies>
 
     <build>
-        <sourceDirectory>src/main/kotlin</sourceDirectory>
-        <testSourceDirectory>src/test/kotlin</testSourceDirectory>
+        <sourceDirectory>gildedrose/src/main/kotlin</sourceDirectory>
+        <testSourceDirectory>gildedrose/src/test/kotlin</testSourceDirectory>
 
         <plugins>
             <plugin>
