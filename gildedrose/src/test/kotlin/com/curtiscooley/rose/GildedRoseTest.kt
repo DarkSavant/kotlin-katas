@@ -2,8 +2,11 @@ package com.curtiscooley.rose
 
 import com.gildedrose.GildedRose
 import com.gildedrose.Item
+import io.kotlintest.KTestJUnitRunner
 import io.kotlintest.specs.FlatSpec
+import org.junit.runner.RunWith
 
+@RunWith(KTestJUnitRunner::class)
 class GildedRoseTest : FlatSpec() {
     init {
         "Sulfras" should "never age" {

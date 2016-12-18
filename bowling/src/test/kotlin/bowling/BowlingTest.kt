@@ -1,8 +1,11 @@
 package bowling
 
+import io.kotlintest.KTestJUnitRunner
 import io.kotlintest.specs.FlatSpec
 import kt.times.times
+import org.junit.runner.RunWith
 
+@RunWith(KTestJUnitRunner::class)
 class BowlingTest : FlatSpec() {
 
     init {

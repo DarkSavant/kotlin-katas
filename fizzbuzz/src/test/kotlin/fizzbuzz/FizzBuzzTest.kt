@@ -1,7 +1,10 @@
 package fizzbuzz
 
+import io.kotlintest.KTestJUnitRunner
 import io.kotlintest.specs.FlatSpec
+import org.junit.runner.RunWith
 
+@RunWith(KTestJUnitRunner::class)
 class FizzBuzzTest : FlatSpec() {
     init {
         "counting to 1" should "be 1" {
